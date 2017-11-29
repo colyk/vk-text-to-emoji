@@ -1,6 +1,11 @@
 # vk-text-to-emoji
 vk bot which change input text to emoji.
 
+#### Sample of work:
+
+
+  >  ![alt text](https://image.ibb.co/ckpa9b/emoji.png)
+
 requriments for vk_emoji:
  - json
  - vk_api

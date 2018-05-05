@@ -18,7 +18,7 @@ except vk_api.AuthError as error_msg:
 
 
 def write_msg(user_id, message):
-    vk.method('messages.send', {'user_id':user_id, 'message':message})
+    vk.method('messages.send', {'user_id': user_id, 'message': message})
 
 
 def get_key(dic, key):
@@ -33,13 +33,13 @@ with open('json_out.txt', 'r', encoding='utf-8-sig') as file:
 
 while True:
     response = vk.method('messages.get', values)
-    vk.method('account.setOnline') # 'account.setOffline'
+    vk.method('account.setOnline')  # 'account.setOffline'
 
     # if someone sent message to bot
-    if response['items']:  
+    if response['items']:
         user_text = ''
         result = []
-        
+
         values['last_message_id'] = response['items'][0]['id']
         raw_text = response['items'][0]['body']
         # print('User text: ', raw_text)
